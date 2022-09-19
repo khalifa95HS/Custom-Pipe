@@ -1,0 +1,25 @@
+<p>
+  {{ 'This is sample demo' | uppercase }}
+</p>
+<div>
+  <!-- Date pipe -->
+  <p>{{ myDate | date:'long' }}</p>
+
+  <!-- Decimal pipe -->
+  <p>{{ decimalNumber | number:'3.2-5' }}</p>
+
+  <!-- Percent pipe -->
+  <p>{{ percentNumber | percent:'2.2-5' }}</p>
+
+  <!-- Currency pipe -->
+  <p>{{ moneyValue | currency:'INR' }}</p>
+  <p>{{ moneyValue | currency:'USD' }}</p>
+
+  <!-- Keyvalue pipe -->
+  <div *ngFor="let item of myObj | keyvalue">
+    Key: <b>{{item.key}}</b> and Value: <b>{{item.value}}</b>
+  </div>
+
+<p> {{ 'This is testing string' | myCustumPipe:'true' }}</p>
+<p> {{ 'This is testing string' | myCustumPipe:'false' }}</p>
+</div>
